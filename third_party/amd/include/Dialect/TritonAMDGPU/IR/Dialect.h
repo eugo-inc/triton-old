@@ -34,14 +34,14 @@
 #include "triton/Dialect/TritonGPU/IR/Dialect.h"
 
 // clang-format off
-#include "amd/include/Dialect/TritonAMDGPU/IR/Dialect.h.inc"
-#include "amd/include/Dialect/TritonAMDGPU/IR/TritonAMDGPUEnums.h.inc"
+// #include "amd/include/Dialect/TritonAMDGPU/IR/Dialect.h.inc" // @EUGO_CHANGE - no AMD support
+// #include "amd/include/Dialect/TritonAMDGPU/IR/TritonAMDGPUEnums.h.inc" // @EUGO_CHANGE - no AMD support
 // clang-format on
 
 #define GET_ATTRDEF_CLASSES
-#include "amd/include/Dialect/TritonAMDGPU/IR/TritonAMDGPUAttrDefs.h.inc"
+// #include "amd/include/Dialect/TritonAMDGPU/IR/TritonAMDGPUAttrDefs.h.inc" // @EUGO_CHANGE - no AMD support
 
 #define GET_OP_CLASSES
-#include "amd/include/Dialect/TritonAMDGPU/IR/Ops.h.inc"
+// #include "amd/include/Dialect/TritonAMDGPU/IR/Ops.h.inc" // @EUGO_CHANGE - no AMD support
 
 #endif // TRITON_THIRD_PARTY_AMD_INCLUDE_DIALECT_TRITONAMDGPU_IR_DIALECT_H_

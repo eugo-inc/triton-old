@@ -3,7 +3,7 @@
 #include "Context/Shadow.h"
 #include "Data/TreeData.h"
 #include "Profiler/Cupti/CuptiProfiler.h"
-#include "Profiler/Roctracer/RoctracerProfiler.h"
+// #include "Profiler/Roctracer/RoctracerProfiler.h" // @EUGO_CHANGE - no ROCM support
 #include "Utility/String.h"
 
 namespace proton {
@@ -16,10 +16,10 @@ Profiler *getProfiler(const std::string &name, const std::string &path) {
   if (proton::toLower(name) == "cupti_pcsampling") {
     return &CuptiProfiler::instance().setLibPath(path).enablePCSampling();
   }
-  if (proton::toLower(name) == "roctracer") {
-    return &RoctracerProfiler::instance();
-  }
-  throw std::runtime_error("Unknown profiler: " + name);
+  // if (proton::toLower(profilerName) == "roctracer") { // @EUGO_CHANGE - no ROCM support
+  //   return &RoctracerProfiler::instance(); // @EUGO_CHANGE - no ROCM support
+  // } // @EUGO_CHANGE - no ROCM support
+  throw std::runtime_error("Unknown profiler: " + profilerName);
 }
 
 std::unique_ptr<Data> makeData(const std::string &dataName,

@@ -1,5 +1,6 @@
-#include "Driver/GPU/RoctracerApi.h"
-#include "Driver/Dispatch.h"
+// @EUGO_CHANGE - no ROCM support
+// #include "Driver/GPU/RoctracerApi.h"
+// #include "Driver/Dispatch.h"
 
 namespace proton {
 

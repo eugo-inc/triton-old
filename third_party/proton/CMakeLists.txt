@@ -63,11 +63,8 @@ if(NOT _proton_obj_libs)
   message(WARNING "No object libraries were defined in 'PROTON_LIBS'!")
 endif()
 
-set(_proton_obj_sources "")
-foreach(_lib IN LISTS _proton_obj_libs)
-  list(APPEND _proton_obj_sources $<TARGET_OBJECTS:${_lib}>)
-  message(STATUS "Collecting object files from ${_lib}")
-endforeach()
+# include_directories(SYSTEM ${ROCTRACER_INCLUDE_DIR}) # @EUGO_CHANGE - no ROCM support
+# target_compile_definitions(proton PRIVATE __HIP_PLATFORM_AMD__) # @EUGO_CHANGE - no HIP/AMD support
 
 add_library(proton SHARED ${_proton_obj_sources})
 

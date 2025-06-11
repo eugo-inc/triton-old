@@ -1,7 +1,8 @@
-#include "Driver/GPU/HipApi.h"
-#include "Driver/Dispatch.h"
-#include "hip/hip_runtime_api.h"
-#include <string>
+// @EUGO_CHANGE - no HIP support
+// #include "Driver/GPU/HipApi.h"
+// #include "Driver/Dispatch.h"
+// #include "hip/hip_runtime_api.h"
+// #include <string>
 
 namespace proton {
 
