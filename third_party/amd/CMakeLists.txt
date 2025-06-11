@@ -1,4 +1,5 @@
-# include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include) @EUGO_CHANGE
+# @EUGO_CHANGE - no AMD support
+# include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 # include_directories(${CMAKE_CURRENT_BINARY_DIR}/include)
 # add_subdirectory(include)
 # add_subdirectory(lib)

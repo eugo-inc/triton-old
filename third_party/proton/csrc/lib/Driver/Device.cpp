@@ -1,6 +1,6 @@
 #include "Driver/Device.h"
 #include "Driver/GPU/CudaApi.h"
-// #include "Driver/GPU/HipApi.h" @EUGO_CHANGE
+// #include "Driver/GPU/HipApi.h" // @EUGO_CHANGE - no HIP support
 
 #include "Utility/Errors.h"
 
@@ -10,7 +10,7 @@ Device getDevice(DeviceType type, uint64_t index) {
   if (type == DeviceType::CUDA) {
     return cuda::getDevice(index);
   }
-  // if (type == DeviceType::HIP) { @EUGO_CHANGE
+  // if (type == DeviceType::HIP) { // @EUGO_CHANGE - no HIP support
   //   return hip::getDevice(index);
   // }
   throw std::runtime_error("DeviceType not supported");
@@ -19,9 +19,9 @@ Device getDevice(DeviceType type, uint64_t index) {
 const std::string getDeviceTypeString(DeviceType type) {
   if (type == DeviceType::CUDA) {
     return DeviceTraits<DeviceType::CUDA>::name;
-  } // else if (type == DeviceType::HIP) {
-  //   return DeviceTraits<DeviceType::HIP>::name;
-  // }
+  } // else if (type == DeviceType::HIP) { // @EUGO_CHANGE - no HIP support
+  //   return DeviceTraits<DeviceType::HIP>::name; // @EUGO_CHANGE - no HIP support
+  // } // @EUGO_CHANGE - no HIP support
   throw std::runtime_error("DeviceType not supported");
 }
 
