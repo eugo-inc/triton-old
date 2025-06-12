@@ -1,7 +1,6 @@
 
 [build-system]
-requires = ["meson", "meson-python"] # @EUGO_CHANGE: Updated dependencies
-build-backend = "mesonpy" # @EUGO_CHANGE:  Specified build backend
+requires = ["setuptools>=40.8.0", "wheel", "cmake>=3.18", "ninja>=1.11.1", "pybind11>=2.13.1"]
 
 # We're incrementally switching from autopep8 to ruff.
 [tool.autopep8]
